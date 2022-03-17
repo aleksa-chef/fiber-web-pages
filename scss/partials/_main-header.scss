@@ -1,0 +1,239 @@
+.main-header {
+    padding-top: 29px;
+    padding-bottom: 29px;
+    background-color: $white;
+
+    .logo {
+        text-decoration: none;
+        color: $black;
+        font-weight: 700;
+        font-size: 23px;
+    }
+
+    .main-nav {
+        display: flex;
+        align-items: center;
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin-left: 30px;
+
+                a {
+                    text-decoration: none;
+                    color: $black;
+                    font-weight: 400;
+                    font-size: 18px;
+                    transition: 0.2s;
+
+                    &:hover {
+                        color: #5e5e5e;
+                    }
+                }
+            }
+        }
+    }
+
+    .sign-buttons {
+        display: flex;
+        align-items: center;
+
+        ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin-left: 40px;
+
+                a {
+                    text-decoration: none;
+                    color: $black;
+                    font-weight: 700;
+                    font-size: 20px;
+                    transition: 0.2s;
+
+                    &:hover {
+                        color: $mainPurple;
+                    }
+                }
+
+                .sign-up-btn {
+                    color: $white;
+                    padding: 16px 26px;
+                    background-color: $mainPurple;
+                    border-radius: 6px;
+                    border: 1px solid $mainPurple;
+                    transition: 0.2s;
+
+                    &:hover {
+                        background-color: $white;
+                        color: $mainPurple;
+                    }
+                }
+            }
+        }
+    }
+
+    .hamburger-btn {
+        cursor: pointer;
+        display: none;
+        
+        img {
+            width: 28px;
+            height: 27px;
+        }
+    }
+}
+
+// Hamburger Navigation
+
+#overlay {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba( 0, 0, 0, 0.2);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.side-nav-left {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $mainPurple;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+        
+    h2 {
+        font-size: 34px;
+        text-decoration: none;
+        color: $white;
+        font-weight: 700;
+        position: absolute;
+        top: 0;
+        margin-top: 21px;
+        margin-left: 30px;
+    }
+
+    a {
+        margin: 15px 10px 10px 30px;
+        text-decoration: none;
+        font-size: 26px;
+        font-weight: 400;
+        color: $white;
+        display: block;
+        transition: 0.2s;
+
+        &:nth-child(3) {
+            margin-top: 50px;
+        }
+    }
+
+    .sign-in-btn {
+        padding: 5px;
+        text-align: center;
+        font-weight: 700;
+        border: 1px solid $white;
+        white-space: nowrap;
+        border-radius: 6px;
+        display: inline-block;
+        width: 190px;
+    }
+
+    .sign-up-btn {
+        padding: 5px;
+        text-align: center;
+        font-weight: 700;
+        border: 1px solid $white;
+        background-color: $white;
+        color: $mainPurple;
+        border-radius: 6px;
+        display: inline-block;
+        width: 190px;
+    }
+
+    .btn-close {
+        position: absolute;
+        top: 0;
+        right: 22px;
+        font-size: 36px;
+        margin-left: 50px;
+        font-weight: 800;
+    }
+}
+
+// Media Queries
+
+@media (max-width: 992px) {
+
+    .main-header {
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        .main-nav {
+
+            .nav-list {
+
+                li {
+
+                    a {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .sign-buttons {
+
+            ul {
+
+                li {
+
+                    a {
+                        font-size: 18px;
+                    }
+
+                    .sign-up-btn {
+
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .main-header {
+        padding-top: 17px;
+        padding-bottom: 17px;
+
+        .logo {
+            font-size: 20px;
+        }
+
+        .main-nav {
+            display: none;
+        }
+
+        .sign-buttons {
+            display: none;
+        }
+
+        .hamburger-btn {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,281 @@
+.hero-section {
+    padding-top: 20px;
+    padding-bottom: 150px;
+
+    .text-section {
+
+        .rated {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+
+            .stars-wrapper{
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+
+                img {
+                    width: 18px;
+                    margin-right: 5px;
+                }
+            }
+
+            p {
+                color: $black;
+                font-weight: 400;
+                font-size: 18px;
+                margin: 0;
+            }
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 55px;
+            width: 560px;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 18px;
+            color: #4f4f4f;
+            margin-bottom: 15px;
+        }
+
+        .links-holder {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+
+            .cta-btn {
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 20px;
+                color: $white;
+                padding: 16px 26px;
+                background-color: $mainPurple;
+                border: 1px solid $mainPurple;
+                border-radius: 6px;
+                margin-right: 40px;
+                transition: 0.2s;
+
+                &:hover {
+                    background-color: $white;
+                    color: $mainPurple;
+                }
+            }
+
+            .link-btn {
+                color: $mainPurple;
+                font-weight: 700;
+                font-size: 20px;
+                text-decoration: underline;
+            }
+        }
+
+        .checkmarks-holder {
+            display: flex;
+            align-items: center;
+
+            .checkmark {
+                display: flex;
+                align-items: center;
+                margin-right: 15px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                img {
+                    width: 24px;
+                    margin-right: 10px;
+                }
+    
+                p {
+                    color: #4f4f4f;
+                    font-weight: 40;
+                    font-size: 18px;
+                    margin: 0;
+                    margin-right: 15px;
+    
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .image-holder {
+        max-width: 568px;
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+// Media Queries
+
+@media (max-width: 1200px) {
+
+    .hero-section {
+
+        .text-section {
+
+            h2 {
+                font-size: 45px;
+                width: 459px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        .image-holder {
+            max-width: 457px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+
+    .hero-section {
+
+        .text-section {
+            .rated {
+                margin-bottom: 5px;
+    
+                p {
+                    font-size: 18px;
+                }
+            }
+    
+            h2 {
+                font-size: 40px;
+                width: 408px;
+                margin-bottom: 5px;
+            }
+    
+            p {
+                margin-bottom: 10px;
+            }
+    
+            .links-holder {
+    
+                .cta-btn {
+                    font-size: 18px;
+                }
+    
+                .link-btn {
+                    font-size: 18px;
+                }
+            }
+    
+            .checkmarks-holder {
+    
+                .checkmark {
+    
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .image-holder {
+            max-width: 280px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero-section {
+        padding-bottom: 20px;
+
+        .image-holder {
+            order: 1;
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .text-section {
+            order: 2;
+            max-width: 100%;
+
+            .rated {
+                display: none;
+            }
+
+            h2 {
+                font-size: 42px;
+                margin-bottom: 10px;
+                max-width: 100%;
+            }
+            
+            p {
+                font-size: 18px;
+                margin-bottom: 20px;
+                max-width: 100%;
+            }
+
+            .links-holder {
+                display: block;
+                max-width: 100%;
+                text-align: center;
+
+                .cta-btn {
+                    font-size: 20px;
+                    display: block;
+                    margin-bottom: 20px;
+                    margin-right: 0;
+                }
+
+                .link-btn {
+                    font-size: 20px;
+                    display: block;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .checkmarks-holder {
+                display: block;
+
+                .checkmark {
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    p {
+                        font-size: 26px;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+
+    .hero-section {
+
+        .text-section {
+
+            .checkmarks-holder {
+
+                .checkmark {
+
+                    p {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

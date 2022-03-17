@@ -1,0 +1,153 @@
+.main-footer {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    .about {
+        width: 380px;
+
+        .logo {
+            font-weight: 700;
+            font-size: 23px;
+            text-decoration: none;
+            color: $black;
+
+            h3 {
+                margin-bottom: 10px;
+            }
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 18px;
+            color: #4f4f4f;
+            margin-bottom: 55px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .menu {
+
+        h3 {
+            font-weight: 700;
+            font-size: 23px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin-bottom: 15px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: #4f4f4f;
+                    font-weight: 400;
+                    font-size: 18px;
+                    transition: 0.2s;
+
+                    &:hover {
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Media Queries
+
+@media (max-width: 1200px) {
+
+    .main-footer {
+
+        .about {
+            width: 338px;
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        .menu {
+
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+
+    .main-footer {
+
+        .about {
+            width: 179px;
+
+            .logo {
+                
+                h3 {
+                    margin-bottom: 20px;
+                }
+            }
+
+            p {
+                margin-bottom: 20px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .main-footer {
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        .about {
+            width: 100%;
+            margin-bottom: 40px;
+
+            .logo {
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 18px;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .menu {
+            width: 100%;
+            margin-bottom: 40px;
+
+            h3 {
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 18px;
+                margin-bottom: 10pxx;
+            }
+        }
+    }
+}

@@ -1,0 +1,153 @@
+.comments-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    overflow-x: scroll;
+    scrollbar-color: #818181 $white;
+    scrollbar-width: thin;
+
+    ::-webkit-scrollbar {
+        width: thin;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background-color: $white;
+        border-radius: 100px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: #818181;
+        border-radius: 100px;
+    }
+
+    .comment-wrapper {
+        min-width: 462px;
+        height: 100%;
+        background-color: transparent;
+        border: 1px solid #dadada;
+        border-radius: 10px;
+        padding: 30px;
+        margin-right: 40px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+
+            img {
+                width: 65px;
+                margin-right: 20px;
+            }
+
+            .username {
+                margin: 0;
+
+                h4 {
+                    font-weight: 700;
+                    font-size: 18px;
+                    color: $mainPurple;
+                }
+
+                p {
+                    font-weight: 400;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 18px;
+            width: 100%;
+            margin-bottom: 36px;
+        }
+
+        .btn {
+            display: block;
+            color: $mainPurple;
+            font-weight: 700;
+            font-size: 20px;
+            text-align: center;
+            padding-top: 21px;
+            padding-bottom: 21px;
+            background-color: transparent;
+            border: 1px solid #dadada;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.2s;
+
+            &:hover {
+                color: $white;
+                background-color: $mainPurple;
+                border-color: $mainPurple;
+            }
+        }
+    }
+}
+
+// Media Queries
+
+@media (max-width: 1200px) {
+    
+    .comments-section {
+
+        .comment-wrapper {
+            margin-right: 30px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+
+    .comments-section {
+
+        .comment-wrapper {
+            margin-bottom: 30px;
+            width: 100%;
+            margin-right: 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .comments-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        .comment-wrapper {
+            padding: 18px;
+            margin-bottom: 56px;
+            width: 100%;
+            min-width: 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .profile {
+                margin-bottom: 10px;
+            }
+
+            p {
+                margin-bottom: 10px;
+            }
+
+            a {
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+    }
+}
